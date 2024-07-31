@@ -12,6 +12,7 @@ contract TaskContract {
         string taskText;
         bool isDeleted;
     }
+    
 
     Task[] private tasks;
 
