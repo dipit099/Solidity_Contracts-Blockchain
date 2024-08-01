@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+
 // Some compilers may show a warning if this is not used.
 
 pragma solidity ^0.8.24;
