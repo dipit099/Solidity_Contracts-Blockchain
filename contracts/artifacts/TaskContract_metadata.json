@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.24+commit.e11b9ed9"
 	},
 	"language": "Solidity",
 	"output": {
@@ -130,7 +130,7 @@
 		"compilationTarget": {
 			"contracts/TaskContract.sol": "TaskContract"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -143,11 +143,11 @@
 	},
 	"sources": {
 		"contracts/TaskContract.sol": {
-			"keccak256": "0xfdb66e918fdd1f694048a19684443cd8e8d1c675263c76903aaf103c5e4f75f7",
+			"keccak256": "0xda2d7a4f8bf6e92055bfd30ab321f3147dfbc405b100c05c39794669399644bc",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://e098f5295103c04347a0564254b071bc8aec3ae8f5b9eb4f0ea1ab26afa8c8f8",
-				"dweb:/ipfs/QmdzR1bSqzQY2ZoZ4uZpWdfUQ7akGeFpuVKqcuSfCE9uf5"
+				"bzz-raw://391382baa9faee31e9a2786a463384d356c00ceae490bf3bac2f616fe4a21134",
+				"dweb:/ipfs/QmNZnNfSWUrByemn9rH5Bk8366sGf7rEU5DJeQbV9J5zNN"
 			]
 		}
 	},

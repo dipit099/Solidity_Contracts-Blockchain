@@ -9,10 +9,11 @@ contract TaskContract {
     struct Task {
         uint id;
         address username;
+        
         string taskText;
         bool isDeleted;
     }
-    
+
 
     Task[] private tasks;
 
