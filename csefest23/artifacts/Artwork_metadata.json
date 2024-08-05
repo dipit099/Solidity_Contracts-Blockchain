@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.24+commit.e11b9ed9"
 	},
 	"language": "Solidity",
 	"output": {
@@ -326,25 +326,6 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "art_id",
-						"type": "uint256"
-					}
-				],
-				"name": "issueCertificate",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
@@ -464,7 +445,7 @@
 		"compilationTarget": {
 			"csefest23/Artwork.sol": "Artwork"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -477,11 +458,11 @@
 	},
 	"sources": {
 		"csefest23/Artwork.sol": {
-			"keccak256": "0xe3c6d9ad555c7932a6468135d5e4f34aa19130a5338370c9d2114042d64be4de",
+			"keccak256": "0x0bcfdf07048d141a152c0475b9c7cde39e614a7e4026039a9b79b5e7b5573871",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://19f9572d9ac843dc85d4c8325d8e8a3f99e1b81ae70f3b677fcbdd720e3a0dbb",
-				"dweb:/ipfs/QmQaDsNFdbdudJSy7YKt7pzqY7g6MMCE6Rh2bLgw44TGD1"
+				"bzz-raw://54832e40c0ca4e7ea2d6cafa7a4e638896cdce1be9d2b05547058bd13ae0c2d3",
+				"dweb:/ipfs/QmQjs7B8a6eZyhxade4u6eJegvPXxfsftXAqEhh51CtNFa"
 			]
 		}
 	},

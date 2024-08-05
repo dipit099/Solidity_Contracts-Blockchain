@@ -81,17 +81,5 @@ contract ArtworkCollectible is ERC721, Ownable {
         super.safeTransferFrom(from, to, tokenId);
     }
 
-    function safeTransferFrom(
-        address from,
-        address to,
-        uint256 tokenId,
-        bytes memory data
-    ) public override {
-        require(
-            msg.sender == ownerOf(tokenId) &&
-                certificates[tokenId].isTransferable,
-            "Transfers not allowed for this token."
-        );
-        super.safeTransferFrom(from, to, tokenId, data);
-    }
+    
 }

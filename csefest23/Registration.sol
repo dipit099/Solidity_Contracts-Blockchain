@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.24;
 
 contract UserRegistration {
     struct User {
@@ -7,23 +7,27 @@ contract UserRegistration {
         string type1;
     }
 
-    mapping(address => User) private users;
+    mapping(address => User) public  users;  
+    //creates a mapping that links Ethereum addresses to User structs.
 
     event UserRegistered(
-        address indexed userAddress,
+        address indexed userAddress,  //'indexed' means we can search items using userAddress
         address wallet,
         string type1
     );
 
     function registerUser(address _wallet, string memory _type1) public {
         require(_wallet != address(0), "Wallet is required");
+        //address(0) is a special value in Ethereum representing the zero address 
+        
         require(bytes(_type1).length > 0, "Type is required");
         require(
             users[msg.sender].wallet == address(0),
             "User is already registered"
         );
 
-        User memory newUser = User({wallet: _wallet, type1: _type1});
+        User memory newUser = User({wallet: _wallet, 
+                                    type1: _type1});
 
         users[msg.sender] = newUser;
 

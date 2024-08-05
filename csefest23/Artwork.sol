@@ -69,6 +69,45 @@ contract Artwork {
         return art.quantity;
     }
 
+    // Purchase Event
+    event ArtworkPurchased(
+        uint256 artId,
+        address buyer,
+        address seller,
+        uint256 amount
+    );
+
+    // Purchase Artwork and add order to purchases
+    function buyArtwork(uint256 art_id) public payable {
+        Art storage art = artworks[art_id];
+
+        require(art.quantity > 0, "Artwork is out of stock");
+
+        uint256 amount = (10 * art.price)/100;
+        //A buyer calls buyArtwork and sends 10% of the artwork’s price as a deposit. 
+
+        require(msg.value == amount, "Incorrect payment amount");
+
+        (bool sent, ) = payable(art.owner).call{value: amount}("");
+        require(sent, "Payment failed");
+
+        art.quantity--;
+
+        Purchase storage purchase = purchases[purchase_count];
+        purchase.id = purchase_count;
+        purchase.artId = art_id;
+        purchase.buyer = msg.sender;
+        purchase.seller = art.owner;
+        purchase.amount = amount;
+        purchase.total_amount = art.price;
+        purchase.amounts_paid = amount;
+        purchase.amounts_remaining = art.price - amount;
+        purchase.delivery_state = "in warehouse";
+        purchase.delivered_status = false;
+        purchase_count++;
+        emit ArtworkPurchased(art_id, msg.sender, art.owner, amount);
+    }
+
     // Start delivery
     function startDelivery(uint256 purchase_id) public returns (string memory) {
         Purchase storage purchase = purchases[purchase_id];
@@ -92,13 +131,13 @@ contract Artwork {
     }
 
     // Not needed
-    function issueCertificate(uint256 art_id) public returns (bool) {
-        Art storage art = artworks[art_id];
-        art.isVerified = true;
-        art
-            .tokenUri = "https://bafybeiej6epn6i2up5bfmjiil7h5glpeapnclgees5zb6hsokdmyjy2s7y.ipfs.dweb.link/artwork%20%281%29.json";
-        return art.isVerified;
-    }
+    // function issueCertificate(uint256 art_id) public returns (bool) {
+    //     Art storage art = artworks[art_id];
+    //     art.isVerified = true;
+    //     art
+    //         .tokenUri = "https://bafybeiej6epn6i2up5bfmjiil7h5glpeapnclgees5zb6hsokdmyjy2s7y.ipfs.dweb.link/artwork%20%281%29.json";
+    //     return art.isVerified;
+    // }
     
     // Get All Artworks
     function getArtworks() public view returns (Art[] memory) {
@@ -113,43 +152,7 @@ contract Artwork {
         return allArtworks;
     }
 
-    // Purchase Event
-    event ArtworkPurchased(
-        uint256 artId,
-        address buyer,
-        address seller,
-        uint256 amount
-    );
-
-    // Purchase Artwork and add order to purchases
-    function buyArtwork(uint256 art_id) public payable {
-        Art storage art = artworks[art_id];
-
-        require(art.quantity > 0, "Artwork is out of stock");
-
-        uint256 amount = (10 * art.price)/100;
-
-        require(msg.value == amount, "Incorrect payment amount");
-
-        (bool sent, ) = payable(art.owner).call{value: amount}("");
-        require(sent, "Payment failed");
-
-        art.quantity--;
-
-        Purchase storage purchase = purchases[purchase_count];
-        purchase.id = purchase_count;
-        purchase.artId = art_id;
-        purchase.buyer = msg.sender;
-        purchase.seller = art.owner;
-        purchase.amount = amount;
-        purchase.total_amount = art.price;
-        purchase.amounts_paid = amount;
-        purchase.amounts_remaining = art.price - amount;
-        purchase.delivery_state = "in warehouse";
-        purchase.delivered_status = false;
-        purchase_count++;
-        emit ArtworkPurchased(art_id, msg.sender, art.owner, amount);
-    }
+    
 
     function goodsDelivered(uint256 _purchase_id) public payable{
         Purchase storage purchase = purchases[_purchase_id];
@@ -180,3 +183,33 @@ contract Artwork {
         return allPurchases;
     }
 }
+
+
+// Creating Artwork:
+
+// An artist calls createArt to register a new artwork on the platform. 
+// This artwork is stored in the artworks mapping with all relevant details.
+
+// Updating Quantity:
+
+// If needed, the artist can update the quantity of their artwork using updateQuantity.
+// Buying Artwork:
+
+// A buyer calls buyArtwork and sends 10% of the artwork’s price as a deposit.
+// The contract verifies the payment, transfers the deposit to the seller, and creates a new purchase record in the purchases mapping.
+// Starting and Completing Delivery:
+
+// The seller can call startDelivery to update the delivery state to "Dispatched".
+// Once the artwork is delivered, the buyer calls goodsDelivered to mark the delivery as complete. 
+//The final payment is made to the seller, and ownership of the artwork is transferred to the buyer.
+// Issuing Certificates:
+
+// The artist or platform can call issueCertificate to verify the artwork and issue a certificate, updating the isVerified status and assigning a tokenUri.
+// Retrieving Data:
+
+// Users can call getArtworks to view all available artworks.
+// Users can call getPurchases to view all purchase records.
+
+
+
+
