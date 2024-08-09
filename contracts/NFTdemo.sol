@@ -20,6 +20,8 @@ contract Hellonft is ERC721("HelloNft", "HNFT") {
         tokenId = tokenId + 1;
     }
 }
+//i tried to transfer a nft from one owner to another . only the owner of that nft can transfer that. so nice
+
 
 
 // balanceOf: Returns the number of tokens owned by a specific address.
