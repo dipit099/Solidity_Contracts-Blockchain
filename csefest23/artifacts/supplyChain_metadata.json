@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.24+commit.e11b9ed9"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -1214,7 +1214,7 @@
 		"compilationTarget": {
 			"csefest23/supplyChain.sol": "supplyChain"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -1355,11 +1355,11 @@
 			]
 		},
 		"csefest23/supplyChain.sol": {
-			"keccak256": "0x8a1baf749c7051e741c8489d68ff2c009678f39ff1c880a79b0a4e6bbffd6ea5",
+			"keccak256": "0x4f610cc9f931bb69995a91006870a83e62cc1332c199430b7a804cb0cf47e36a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d39e0be6aeea5c5ac557a13912c792e03148cb0041b5ea851c663129ce1b11d8",
-				"dweb:/ipfs/QmQx8D1CzvNhaFRrS4vMV5MpSR1a8rZxnfrN42tK1E91Ea"
+				"bzz-raw://8476579b811cfdd449854567c18e1e0f75fa85610d7709b7f493f29b53d6f7be",
+				"dweb:/ipfs/QmZ6bdKNCnNopegH5qEeKUqBDwibrZp3QcPUumUHzBzAkF"
 			]
 		},
 		"hardhat/console.sol": {
