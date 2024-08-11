@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.24+commit.e11b9ed9"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -443,9 +443,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"csefest23/Artwork.sol": "Artwork"
+			"fest/Artwork.sol": "Artwork"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -457,7 +457,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"csefest23/Artwork.sol": {
+		"fest/Artwork.sol": {
 			"keccak256": "0x0bcfdf07048d141a152c0475b9c7cde39e614a7e4026039a9b79b5e7b5573871",
 			"license": "UNLICENSED",
 			"urls": [
