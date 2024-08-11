@@ -8,6 +8,8 @@ contract ArtworkRegistry {
         address creator;
     }
 
+
+
     mapping(uint256 => Artwork) public artworks;
     uint256 public artworkCount;
 

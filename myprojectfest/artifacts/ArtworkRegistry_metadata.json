@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.24+commit.e11b9ed9"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -141,7 +141,7 @@
 		"compilationTarget": {
 			"myprojectfest/ArtworkRegistry.sol": "ArtworkRegistry"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -154,11 +154,11 @@
 	},
 	"sources": {
 		"myprojectfest/ArtworkRegistry.sol": {
-			"keccak256": "0x8361dfb4f1ebb7bae7d30eb0f5945b5076808c68b2c524b7c53bb2b2fae9d389",
+			"keccak256": "0xf4502acdf7a4fadedaeee29217fa6b566fe358677a13ee44b2f60d15458cc20a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5ab6415c6828d79982a117920edb334c89d887f3065570e7dd95db7209544237",
-				"dweb:/ipfs/QmabBM8afE5xEDtA88zxbB8zQ9NCuFdkkKYqVVKVKTELgo"
+				"bzz-raw://2fae367e448997e71b8219619382418bbb11e8ba2ffbf7695a3cfe012ebcfb22",
+				"dweb:/ipfs/QmTtdg6tgXWY9X5kMKNzRLFrLCkg4CBRw4PeS68Yegeju5"
 			]
 		}
 	},
