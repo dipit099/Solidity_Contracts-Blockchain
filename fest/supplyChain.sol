@@ -360,7 +360,7 @@ contract supplyChain is ERC721URIStorage {
     )
   {
     require(_ownerOf(tokenId) != address(0), "Certificate: Token ID does not exist");
-    
+    //fixed that
 
     CertificateData memory data = certificates[tokenId];
     return (data.artworkId, data.creator, data.issueDate);

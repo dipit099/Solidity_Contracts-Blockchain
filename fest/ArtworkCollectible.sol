@@ -41,7 +41,7 @@ contract ArtworkCollectible is ERC721, Ownable {
         uint256 tokenId,
         bool isTransferable
     ) external onlyOwner {
-        require(_exists(tokenId), "Token does not exist");
+        require(_requireOwned(tokenId), "Token does not exist");
         certificates[tokenId].isTransferable = isTransferable;
     }
 
@@ -49,7 +49,7 @@ contract ArtworkCollectible is ERC721, Ownable {
         uint256 tokenId
     ) public view virtual returns (string memory) {
         require(
-            _exists(tokenId),
+            _requireOwned(tokenId),
             "ERC721Metadata: URI query for nonexistent token"
         );
         return certificates[tokenId].tokenURI;
