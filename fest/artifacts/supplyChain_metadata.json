@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.24+commit.e11b9ed9"
 	},
 	"language": "Solidity",
 	"output": {
@@ -1212,9 +1212,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"csefest23/supplyChain.sol": "supplyChain"
+			"fest/supplyChain.sol": "supplyChain"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -1354,7 +1354,7 @@
 				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
 			]
 		},
-		"csefest23/supplyChain.sol": {
+		"fest/supplyChain.sol": {
 			"keccak256": "0x4f610cc9f931bb69995a91006870a83e62cc1332c199430b7a804cb0cf47e36a",
 			"license": "GPL-3.0",
 			"urls": [

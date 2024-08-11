@@ -1,0 +1,151 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_artworkRegistry",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "artworkRegistry",
+				"outputs": [
+					{
+						"internalType": "contract ArtworkRegistry",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "bids",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_artworkId",
+						"type": "uint256"
+					}
+				],
+				"name": "getBids",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "bidder",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct AuctionHouse.Bid[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_artworkId",
+						"type": "uint256"
+					}
+				],
+				"name": "placeBid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"myprojectfest/AuctionHouse.sol": "AuctionHouse"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"myprojectfest/ArtworkRegistry.sol": {
+			"keccak256": "0x8361dfb4f1ebb7bae7d30eb0f5945b5076808c68b2c524b7c53bb2b2fae9d389",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ab6415c6828d79982a117920edb334c89d887f3065570e7dd95db7209544237",
+				"dweb:/ipfs/QmabBM8afE5xEDtA88zxbB8zQ9NCuFdkkKYqVVKVKTELgo"
+			]
+		},
+		"myprojectfest/AuctionHouse.sol": {
+			"keccak256": "0xe18e9dfc5633a4d85382fa1013f2d7dfd6747afa5c57b20f9e9f859154ecd24e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c37b8b0328e476fdce547a8e4f3b2e93b6178c9a55b14e6aad8d8f54f6e24573",
+				"dweb:/ipfs/QmPhPSps9u5Pms4TevEeNTXPWDgz1H2RgAFHD7iPJmVZFh"
+			]
+		}
+	},
+	"version": 1
+}
