@@ -727,11 +727,11 @@
 			]
 		},
 		"contracts/NFTdemo.sol": {
-			"keccak256": "0xeb0c7ebee755648ccede257fb61285c5f7ebfb54cb46823f874b90a9771c2757",
+			"keccak256": "0xe3b47fc6632309fdd8c584143e8cea296364e5e6c2bf89f736817e480b98d6f7",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://5bf239e4fed27013908c460ea474f616eb7e92e08435dfef291ce1e30e50d156",
-				"dweb:/ipfs/QmPGhDBKTNenJvr1X5nEiPhXKdWsqkKjjrHgPfKRz52Rcd"
+				"bzz-raw://cf03bb52a3202d451e3e3c433a94c7de89881613efcf76b769932e745ab0b9d1",
+				"dweb:/ipfs/QmQ8EJ4H6ZqgUvWaj9NHXYyTjbrMuepiW5B4RiWpntJeNN"
 			]
 		}
 	},

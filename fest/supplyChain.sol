@@ -132,7 +132,7 @@ contract supplyChain is ERC721URIStorage {
     artworks[totalArtworks].description = description;
     artworks[totalArtworks].price = price;
     artworks[totalArtworks].quantity = quantity;
-    artworks[totalArtworks].creator = msg.sender;
+    artworks[totalArtworks].creator = msg.sender;// creator
     artworks[totalArtworks].tokenURI = tokenURI;
     artworks[totalArtworks].deadline = deadline;
     artworks[totalArtworks].certificateId = certificateId;
@@ -329,10 +329,8 @@ contract supplyChain is ERC721URIStorage {
 
   // verify certificate
   function issueCertificate(
-    uint256 artworkId,
-    uint256 issueDate,
-    string memory tokenURI
-  ) external onlyVerifier(artworkId) returns (uint256) {
+    uint256 artworkId, uint256 issueDate, string memory tokenURI ) external onlyVerifier(artworkId) 
+    returns (uint256) {
     _certificateTokenIds.increment();
     uint256 tokenId = _certificateTokenIds.current();
     certificates[tokenId] = CertificateData(
