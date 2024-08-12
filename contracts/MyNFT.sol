@@ -57,7 +57,7 @@ contract ArtMarketplace is ERC721, Ownable {
 
         emit ArtCreated(newArtId, name, tokenURI, msg.sender, price);
 
-        return newArtId;
+        // return newArtId;
     }
 
     function buyArt(uint256 artId) public payable {
